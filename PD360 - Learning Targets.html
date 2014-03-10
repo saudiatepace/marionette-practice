@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html webdriver="true" class="mti-inactive" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>PD360 - Learning Targets</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="">
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- fonts, favicon, and touch icons -->
+	<link rel="shortcut icon" href="http://builtbyhq.com/projects/sinet/img/favicon.png">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js">
+	</script>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js">
+	</script>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js">
+	</script>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/1.5.1-bundled/backbone.marionette.min.js"></script>
+
+
+	<!-- additional marionette (yanyan) -->
+	<script type="text/template" id="headerContent"> 
+    					<img src="<%= src %>"/>
+						<p>O<%= page%> </p><p><%= text%></p>
+						<h3 class="toggle-drawer1"><%= page%><img src="PD360%20-%20Learning%20Targets_files/downarrow-blue.png"></h3>
+						<br class="clear">
+				</script>
+	<script type="text/javascript" src="../marionette/marionette.js"></script>
+
+
+	<!-- styles -->
+	<link rel="stylesheet" href="PD360%20-%20Learning%20Targets_files/bootstrap.css">
+	<link rel="stylesheet" href="PD360%20-%20Learning%20Targets_files/style.css">
+	<link rel="stylesheet" href="PD360%20-%20Learning%20Targets_files/responsive.css">
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css"><![endif]-->
+</head> 
+<body>
+
+	<nav>
+	<div class="nav-bar">
+		<div class="nav-bar-left">
+			<a href="http://builtbyhq.com/projects/sinet/resources.html"><div class="logo"><img src="PD360%20-%20Learning%20Targets_files/logo.png" alt="School Improvement"></div></a>
+			<ul class="top-nav">
+				<a href="http://builtbyhq.com/projects/sinet/resources.html">
+					<li id="resources-tab">
+						<span>Resources</span>
+					</li>
+				</a>
+				<a href="http://builtbyhq.com/projects/sinet/groups.html"><li id="groups-tab"><span>Groups</span></li></a>
+			</ul>
+			<a href="#"><div class="menu-btn"><img src="PD360%20-%20Learning%20Targets_files/menu-btn.png"></div></a>
+			<a href=""><div class="notification-icon-mobile"><img src="PD360%20-%20Learning%20Targets_files/notification-icon.png"></div></a>
+		</div>
+		<div class="nav-bar-middle">
+			<form action="search-results.html" class="search-form">
+				<input placeholder="Search (e.g. video or group)" class="search-field">
+			</form>
+		</div>
+		<div class="help">
+			<div class="btn-group">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown">Help</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>Tool Tips</li>
+					<li>FAQ's</li>
+					<li>What's New</li>
+					<li class="border-top">
+						Contact Us
+						<h4>Phone:855-377-8500</h4>
+						<button class="white-btn">Send Support Email</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav-bar-right">
+			<div class="nav-menu">
+				<div class="menu-container">
+					<div id="bar1" class="menu-bar"></div>
+					<div id="bar2" class="menu-bar"></div>
+					<div id="bar3" class="menu-bar"></div>
+				</div>
+				<div style="display: none;" id="menu">
+					<div class="black"></div>
+					<ul>
+						<li>Your Profile</li>
+						<li>Settings</li>
+						<li>Support</li>
+						<li>Learning Targets</li>
+						<li class="border-top">Log Out</li>
+					</ul>
+				</div>
+			</div>
+			<div class="user-notifications">
+				<img src="PD360%20-%20Learning%20Targets_files/andy-notifications.png">
+				<div style="display: none;" id="menu2">
+					<div class="black">
+					</div>
+					<div class="dd">	
+						<h3>Notifications</h3>
+						<br class="clear">
+						<ul>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-play.png"> <p><a href="">Ann Perkins</a> shared a video with you</p><br class="clear"></li>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-group.png"> <p><a href="">Leslie Knope</a> assigned a focus objective</p><br class="clear"></li>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-lesson.png"> <p><a href="">Ann Perkins</a> shared a lesson plan with you</p><br class="clear"></li>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-play.png"> <p><a href="">Leslie Knope</a> assigned you a focus objective</p><br class="clear"></li>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-play.png"> <p><a href="">Ann Perkins</a> shared a video with you</p><br class="clear"></li>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-play.png"> <p><a href="">Leslie Knope</a> assigned you a focus objective</p><br class="clear"></li>
+							<li><img src="PD360%20-%20Learning%20Targets_files/white-group.png"> <p><a href="">Ron Swanson</a> shared a lesson plan with you</p><br class="clear"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+	<div class="nav-padding"></div>
+	
+	
+	<section id="objectives">
+		<div class="container">	
+			<div class="nav">
+				<h2>Learning Targets</h2>
+				<ul>
+					<li class="active"><a href="#all">All (5)</a></li>
+					<li><a href="#in-progress">In Progress</a></li>
+					<li><a href="#complete">Complete</a></li>
+				</ul>
+			</div>
+		</div>	
+			<!-- tab content -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="all">
+			
+		        <!-- code here (yanyan) -->
+	
+				sddfafas
+
+
+				</div>
+			</div>
+		
+	</section>
+	<!-- templates below -->
+	
+	
+	<!-- scripts & modals -->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+
+
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	<!-- Google Analytics -->
+
+</body></html>
